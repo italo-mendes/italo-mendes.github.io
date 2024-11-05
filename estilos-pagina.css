@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face { 
+  font-family: 'Grundschrift-Regular';
+  src: url('font/Grundschrift-Regular.otf') format("opentype");
+}
+
+body {
+  font-family: Grundschrift-Regular;
+  font-style: normal;
+}
+
+.column {
+  float: left;
+  width: 33%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.game-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /*width: 37%;  */
+}
+
+.buttons-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;  
+}
+
+.title-text {
+  text-align: center;
+  color: #222;
+}
+
+.download-area {
+  margin-top: 40px; 
+  border: 5px solid #A67EFF80; 
+  border-radius: 60px;
+}
+
+/* Responsive layout - 
+makes the four columns stack on top of each other 
+instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+
+  .game-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .buttons-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;  
+  }
+}
